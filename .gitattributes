@@ -1,0 +1,6 @@
+# Force GitHub to consider all *.js files as JavaScript
+*.js linguist-language=JavaScript
+
+# Ignore documentation files or generated files from being detected
+*.md linguist-documentation
+*.min.js linguist-vendored
