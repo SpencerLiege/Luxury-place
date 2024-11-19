@@ -9,10 +9,10 @@ const Hero = () => {
           <h1
             className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl"
           >
-            Find The Perfect Rental
+            Explore Luxury Rentals
           </h1>
           <p className="my-4 text-xl text-white">
-            Discover the perfect property that suits your needs.
+            Discover the perfect vacation spot for your holiday.
           </p>
         </div>
         {/* <!-- Form Component --> */}

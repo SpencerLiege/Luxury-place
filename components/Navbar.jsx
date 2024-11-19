@@ -189,7 +189,7 @@ const Navbar = () => {
                   >
                     <Link
                       href='/profile'
-                      className='block px-4 py-2 text-sm text-gray-700'
+                      className='block px-4 py-2 text-sm text-gray-700 hover:bg-[#edcdb1]/40'
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-0'
@@ -201,7 +201,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       href='/properties/saved'
-                      className='block px-4 py-2 text-sm text-gray-700'
+                      className='block px-4 py-2 text-sm text-gray-700 hover:bg-[#edcdb1]/40'
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-2'
@@ -216,7 +216,7 @@ const Navbar = () => {
                         setIsProfileMenuOpen(false);
                         signOut({ callbackUrl: '/' });
                       }}
-                      className='block px-4 py-2 text-sm text-gray-700'
+                      className='block px-4 py-2 text-sm text-gray-700 hover:bg-[#edcdb1]/40 w-full text-start'
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-2'
