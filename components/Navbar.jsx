@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FaGoogle } from 'react-icons/fa';
+import { FcGoogle } from "react-icons/fc";
 import logo from '@/assets/images/logo-white.png';
 import profileDefault from '@/assets/images/profile.png';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
@@ -34,7 +34,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className='bg-blue-700 border-b border-blue-500'>
+    <nav className='bg-[#573548] border-b border-[#edcdb1]/50'>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
         <div className='relative flex h-20 items-center justify-between'>
           <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <Image className='h-10 w-auto' src={logo} alt='PropertyPulse' />
 
               <span className='hidden md:block text-white text-2xl font-bold ml-2'>
-                PropertyPulse
+                LuxPlace
               </span>
             </Link>
             {/* <!-- Desktop Menu Hidden below md screens --> */}
@@ -81,15 +81,15 @@ const Navbar = () => {
                 <Link
                   href='/'
                   className={`${
-                    pathname === '/' ? 'bg-black' : ''
-                  } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
+                    pathname === '/' ? 'bg-[#edcdb1] text-zinc-800' : ''
+                  } text-white  hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                 >
                   Home
                 </Link>
                 <Link
                   href='/properties'
                   className={`${
-                    pathname === '/properties' ? 'bg-black' : ''
+                    pathname === '/properties' ? 'bg-[#edcdb1] text-zinc-800' : ''
                   } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                 >
                   Properties
@@ -98,7 +98,7 @@ const Navbar = () => {
                   <Link
                     href='/properties/add'
                     className={`${
-                      pathname === '/properties/add' ? 'bg-black' : ''
+                      pathname === '/properties/add' ? 'bg-[#edcdb1] text-zinc-800' : ''
                     } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                   >
                     Add Property
@@ -117,9 +117,9 @@ const Navbar = () => {
                     <button
                       key={provider.name}
                       onClick={() => signIn(provider.id)}
-                      className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-3'
+                      className='flex items-center text-zinc-800 bg-[#edcdb1] hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-3'
                     >
-                      <FaGoogle className='text-white mr-2' />
+                      <FcGoogle className='text-white mr-2' />
                       <span>Login or Register</span>
                     </button>
                   ))}
@@ -270,7 +270,7 @@ const Navbar = () => {
                         onClick={() => signIn(provider.id)}
                         className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-3'
                       >
-                        <FaGoogle className='text-white mr-2' />
+                        <FcGoogle className='text-white mr-2' />
                         <span>Login or Register</span>
                       </button>
                     ))}
